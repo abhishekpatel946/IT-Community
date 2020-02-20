@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   
+     <!-- login & signup css -->
+     <link rel="stylesheet" href="css/login.css">
+    
+     <!-- Favicon -->
+    <link rel="shortcut icon" href="img/IMG_20200204_193355.png" type="image/x-icon">
+    
+    <title>GS Forum</title>
+  </head>
+<body style="background-color: #ffffff">
+  
+    <!--Navbar for the page-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark shadow-lg p-3 mb-5 bg-white rounded mr-2 ml-2 mt-2 pt-1 pb-3">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/QFix_Horizontal.png" width="80px" height="80px" alt="image goes here" class="mt-lg-2" />
+        </a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
+         
+          <!-- Search Bar -->
+          <form class="form-inline my-2 my-lg-0 mr-2">
+            <li class="nav-item">
+              <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </li>
+            </form>
+
+        <!-- signup popbar -->  
+          <li class="nav-item">
+            <a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Signup<i class="fas fa-user-plus"></i></a>
+            <div id="id01" class="modal">
+
+              <form class="modal-content animate" action="" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6TaCLCqU4K0ieF27ayjl51NmitWaJAh_X0r1rLX4gMvOe0MDaYw&s" alt="Avatar" class="avatar">
+                </div>
+            
+                <div class="container">
+                  <label for="exampleInput1">Name</label>
+                  <input type="text" class="form-control" placeholder="Name" name="name" minlength="3" maxlength="20" required>
+
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" placeholder="Email" name="email" required>
+                  
+                  <label for="ucat">Category</label>
+                      <select class="form-control" value="" name="category" required>
+                          <option selected></option>
+                          <option>Student</option>
+                          <option>Faculty</option>
+                          <option>Alumni</option>
+                      </select>
+                  
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" placeholder="Password" name="password" minlength="6" maxlength="15" required>          
+                
+                  <button type="submit" value="Login" onclick="signup(form);">Signup</button>  
+                </div>
+            
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot<a href="#">password?</a></span>
+                </div>
+              </form>
+            </div>
+            
+            <script>
+
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            </script>  
+
+            <!-- Script for the login with Username&&password -->
+
+            <script language="javascript">
+              function signup(form) { /*function to check userid & password*/
+              /*the following code checkes whether the entered userid and password are matching*/
+              if(form.name.value == "" && form.email.value == "" && form.category.value == "choose") {
+              //	window.open('DS_Login.html') /*  open the target page while ID & password matched */
+                alert("Please fill the entire form")	/*opens the alert box while Id & password matches*/
+              }
+              else {
+                alert("Form filled Successfully")   /*displays error message*/
+              }
+            }
+            </script>	
+          </li>
+
+           <!-- login popup bar-->
+           <li class="nav-item">
+            <a class="nav-link" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login<i class="fas fa-user-lock"></i></a>
+            <div id="id02" class="modal">
+
+              <form class="modal-content animate" action="" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6TaCLCqU4K0ieF27ayjl51NmitWaJAh_X0r1rLX4gMvOe0MDaYw&s" alt="Avatar" class="avatar">
+                </div>
+            
+                <div class="container">
+                  <label for="exampleInputEmail1">Username</label>
+                  <input type="email" class="form-control" placeholder="UserName" name="userid" required>
+            
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" placeholder="Password" name="pswrd" minlength="6" maxlength="15" required>
+                    
+                  <button type="submit" onclick="login(this.form)" value="Login">Login</button>
+                  
+                </div>
+            
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+              </form>
+            </div>
+            
+            <!-- Script for the login with Username&&password -->
+
+            <script language="javascript">
+              function login(form) { /*function to check userid & password*/
+              /*the following code checkes whether the entered userid and password are matching*/
+              if(form.userid.value == "admin@mail.com" && form.pswrd.value == "password") {
+              //	window.open('DS_Login.html') /*  open the target page while ID & password matched */
+                alert("Successfully Login")	/*opens the alert box while Id & password matches*/
+              }
+              else {
+                alert("Invalid UserID && Password")/*displays error message*/
+              }
+            }
+            </script>	
+
+                        
+          <!-- Script for the closing window with mouse pointer -->
+          <script>
+            // Get the modal
+            var modal_2 = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal_2) {
+                    modal_2.style.display = "none";
+                }
+            }
+            </script>
+            
+            
+            <!-- Script for the closing window with mouse pointer -->
+            <script>
+            // Get the modal
+            var modal_2 = document.getElementById('id02');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal_2) {
+                    modal_2.style.display = "none";
+                }
+            }
+            </script> 
+
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+  <div class="container mt-lg-5">
+    <div class="row justify-content-md-center">
+      <div class="col">
+
+        <!-- left side card contains info. -->
+        <div class="card" style="width: 26rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipPSUNRjDrI0D8PMA0cWl61dGFcrLFmdPA9FZJRw=w213-h160-k-no" class="card-img-top" alt="image goes here">
+          <div class="card-body">
+            <h5 class="card-title">Shri Govindram Seksaria Institute of Technology and Science</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> 23 Sir M. Visvesvaraya Marg, Indore, Madhya Pradesh 452003</li>
+          </ul>
+          <div class="card-body">
+            <a href="http://www.sgsits.ac.in/" class="card-link">SGSITS</a>
+            <a href="http://www.sgsitsindore.in/" class="card-link">SGSITS-indore</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="card border-dark mb-2" style="max-width: 30rem;"> 
+          <div class="card text-left">
+            <div class="card" style="width: 30rem;">
+              <div class="card-header">
+                <h4 class="card-title">Contact us</h4>
+              </div>
+              <div class="card-body">
+                <form action="https://formspree.io/xeqabraz" method="POST">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" placeholder="Name" id="exampleInputName" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" name="_replyto" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Message</label>
+                    <textarea name="message"placeholder="message here...!" rows="5" cols="42" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Send</button>
+                  </div> 
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>   
+
+  <!-- for google map -->
+  <div class="container mt-lg-5 mr-auto ml-auto">
+    <div id="map" style="width:100%;height:500px;background:grey"></div>  
+    <script>  
+        function myMap() {  
+        var mapOptions = { 
+            center: new google.maps.LatLng(22.725591,75.871773),  
+            zoom: 16,  
+            mapTypeId: google.maps.MapTypeId.HYBRID  
+        }  
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);  
+        }  
+    </script>  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh-xpZcuxEhD9J4RHbzwjpUCAZ2KiznWs&callback=myMap"></script>  
+  </div>
+
+    
+
+                     
+     
+    <!--footer-->
+    <div class="card text-center bg-light mt-lg-5">
+      <div class="card-footer text-dark">
+        &copy; Copyright abhidekho.com 2019-20
+            <ul class="nav justify-content-center mt-lg-3">
+              <li class="nav-item">
+                <i class="fas fa-home"></i>
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <i class="fas fa-paragraph"></i>
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <i class="fas fa-headset"></i>
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>
