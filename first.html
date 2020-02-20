@@ -22,16 +22,21 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/IMG_20200204_193355.png" type="image/x-icon">
     
+    <style>
+        body {
+           background-image: url('C:\Users\Rajesh\Desktop\IT-Community-master\img\background.jpg');
+        }
+        </style> 
     
     <title>QFix</title>
   </head>
-<body style="background-color:#ffffff" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body>
   
   <!-- Back to top button -->
   <a id="button" href="#index.html"></a>
 
     <!--Navbar for the page-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark shadow-lg p-3 mb-5 bg-white rounded mr-2 ml-2 mt-2 pt-1 pb-3" data-spy="affix" data-offset-top="1"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark shadow-lg p-3 mb-5 bg-white rounded mr-2 ml-2 mt-2 pt-1 pb-3" data-spy="affix" data-offset-top="1" class="header" id="myHeader"> 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -252,138 +257,30 @@
 
 
 
-  <!--Post in Card form-->
-          <div class="container">
-            <div class="card text-left mt-lg-3">
-              <div class="card-header">
-                <i class="fas fa-user mr-2"></i>
-                User
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">What is HTML?</h5>
-                <p class="card-text">
-                  HTML is short for HyperText Markup Language and is the language of the World Wide Web. 
-                  It is the standard text formatting language used for creating and displaying pages on the Web. 
-                  HTML documents are made up of two things: the content and the tags that format it for proper display on pages.
-                </p>
-                </p>
-              </div>
-              <div class="card-footer text-muted">
-              <!-- like or dislike btn-->
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-light btn-lg" onclick="countLike1()" id="like1"> <i class="far fa-thumbs-up"></i> </button>
-                  <input class="form-control" id="counterLike1" type="text" value="0" readonly>
-                  <button type="button" class="btn btn-light btn-lg ml-3" onclick="countDislike1()" id="dislike1"> <i class="far fa-thumbs-down"></i> </button>
-                  <input class="form-control" id="counterDislike1" type="text" value="0" readonly>
-                </div>
-              <!-- increment or decrement onClick like or dislike btn -->
-                 <script>
-                    function countLike1()
-                      {
-                          var value = parseInt(document.getElementById('counterLike1').value, 10);
-                          value = isNaN(value) ? 0 : value;
-                          value++;
-                          document.getElementById('counterLike1').value = value;
-                      }
 
-                    function countDislike1()
-                      {
-                          var value = parseInt(document.getElementById('counterDislike1').value, 10);
-                          value = isNaN(value) ? 0 : value;
-                          value++;
-                          document.getElementById('counterDislike1').value = value;
-                      }
-                  </script>
-              <!-- light comment -->
-                 <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx1" aria-expanded="false" aria-controls="collapseExample"></i>
-                    <div class="collapse" id="collapseEx1">
-                      <div class="card card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              <!-- comment box -->
-                        <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
-                          <form class="form-inline my-2 my-lg-0 mr-2">
-                            <li class="nav-item">
-                              <input class="form-control mr-sm-1" type="search" placeholder="Comment" aria-label="Search">
-                            </li>
-                            <li class="nav-item">
-                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comment</button>
-                            </li>
-                            </form>
-                          </ul>
-                      </div>
-                    </div>
-                  </div>
-        <!-- end of footer of post section-->
-            </div>
-          </div>
-        
-           
-  <!--Post in Card form-->
-        <div class="container">
-          <div class="card text-left mt-lg-3">
-            <div class="card-header">
-              <i class="fas fa-user mr-2"></i>
-              User
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">What is HTML?</h5>
-              <p class="card-text">
-                HTML is short for HyperText Markup Language and is the language of the World Wide Web. 
-                It is the standard text formatting language used for creating and displaying pages on the Web. 
-                HTML documents are made up of two things: the content and the tags that format it for proper display on pages.
-              </p>
-              </p>
-            </div>
-            <div class="card-footer text-muted">
-            <!-- like or dislike btn-->
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light btn-lg" onclick="countLike2()" id="like2"> <i class="far fa-thumbs-up"></i> </button>
-                <input class="form-control" id="counterLike2" type="text" value="0" readonly>
-                <button type="button" class="btn btn-light btn-lg ml-3" onclick="countDislike2()" id="dislike2"> <i class="far fa-thumbs-down"></i> </button>
-                <input class="form-control" id="counterDislike2" type="text" value="0" readonly>
-              </div>
-            <!-- increment or decrement onClick like or dislike btn -->
-              <script>
-                  function countLike2()
-                    {
-                        var value = parseInt(document.getElementById('counterLike2').value, 10);
-                        value = isNaN(value) ? 0 : value;
-                        value++;
-                        document.getElementById('counterLike2').value = value;
-                    }
 
-                  function countDislike2()
-                    {
-                        var value = parseInt(document.getElementById('counterDislike2').value, 10);
-                        value = isNaN(value) ? 0 : value;
-                        value++;
-                        document.getElementById('counterDislike2').value = value;
-                    }
-                </script>
-            <!-- light comment -->
-              <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx1" aria-expanded="false" aria-controls="collapseExample"></i>
-                  <div class="collapse" id="collapseEx1">
-                    <div class="card card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-            <!-- comment box -->
-                      <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
-                        <form class="form-inline my-2 my-lg-0 mr-2">
-                          <li class="nav-item">
-                            <input class="form-control mr-sm-1" type="search" placeholder="Comment" aria-label="Search">
-                          </li>
-                          <li class="nav-item">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comment</button>
-                          </li>
-                          </form>
-                        </ul>
-                    </div>
-                  </div>
-                </div>
-      <!-- end of footer of post section-->
-          </div>
-        </div>
 
-        
+
+
+
+      <img src="..." class="img-fluid" alt="image !available" width="100px" height="100px">
+
+      <h3>
+        A place to share knowledge and better understand the world
+      </h3>
+     
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -424,6 +321,9 @@
     <!--back to top-->
     <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
     <script src="js/backtop.js"></script>
+
+    <!-- sticky header -->
+    <script src="js/stickyHeader.js"></script>
 
 
   </body>
