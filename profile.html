@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   
+    <!-- login & signup css -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Back to Top -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/backtop.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/IMG_20200204_193355.png" type="image/x-icon">
+    
+
+    <title>QFix</title>
+  </head>
+<body style="background-color:#ffffff" data-spy="scroll" data-target=".navbar" data-offset="50">
+  
+  <!-- Back to top button -->
+  <a id="button" href="#index.html"></a>
+
+    <!--Navbar for the page-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark shadow-lg p-3 mb-5 bg-white rounded mr-2 ml-2 mt-2 pt-1 pb-3" data-spy="affix" data-offset-top="1"> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/QFix_Horizontal.png" width="80px" height="80px" alt="image goes here" class="mt-lg-2" />
+          </a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <!-- Button trigger modal -->
+              <a class="nav-link" style="width:auto;"></i>Ask <i class="fas fa-plus mr-3"></i></a>
+            </li>
+            
+          </ul>
+
+        <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
+              <!-- Search Bar -->
+              <li class="nav-item">
+                <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </li>
+            </form>  
+         
+            <!-- User -->
+            <div class="btn-group">
+              <i class="fas fa-user fa-3x ml-5 mr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Another</a>
+                <a class="dropdown-item" href="#">Something</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.html">Logout</a>
+              </div>
+            </div>
+
+          </ul>
+
+        </div>
+     </nav>
+
+
+
+  <!--Post in Card form-->
+          <div class="container">
+            <div class="card text-left mt-lg-3">
+              <div class="card-header">
+                <i class="fas fa-user fa-1x mr-2"></i>
+                User
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">What is HTML?</h5>
+                <p class="card-text">
+                  HTML is short for HyperText Markup Language and is the language of the World Wide Web. 
+                  It is the standard text formatting language used for creating and displaying pages on the Web. 
+                  HTML documents are made up of two things: the content and the tags that format it for proper display on pages.
+                </p>
+                </p>
+              </div>
+              <div class="card-footer text-muted">
+              <!-- like or dislike btn-->
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-light btn-lg" onclick="countLike1()" id="like1"> <i class="far fa-thumbs-up fa-1x"> </i> </button>
+                  <input class="form-control" id="counterLike1" type="text" value="0" readonly>
+                  <button type="button" class="btn btn-light btn-lg ml-3" onclick="countDislike1()" id="dislike1"> <i class="far fa-thumbs-down fa-1x"> </i> </button>
+                  <input class="form-control" id="counterDislike1" type="text" value="0" readonly>
+                </div>
+              <!-- increment or decrement onClick like or dislike btn -->
+                 <script>
+                    function countLike1()
+                      {
+                          var value = parseInt(document.getElementById('counterLike1').value, 10);
+                          value = isNaN(value) ? 0 : value;
+                          value++;
+                          document.getElementById('counterLike1').value = value;
+                      }
+
+                    function countDislike1()
+                      {
+                          var value = parseInt(document.getElementById('counterDislike1').value, 10);
+                          value = isNaN(value) ? 0 : value;
+                          value++;
+                          document.getElementById('counterDislike1').value = value;
+                      }
+                  </script>
+              <!-- light comment -->
+                 <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx1" aria-expanded="false" aria-controls="collapseExample"></i>
+                    <div class="collapse" id="collapseEx1">
+                      <div class="card card-body">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">okk</li>
+                          <li class="list-group-item">great...</li>
+                          <li class="list-group-item">thnks</li>
+                          <li class="list-group-item">ok thansks</li>
+                        </ul>
+              
+             <!-- comment box -->
+                        <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
+                          <form class="form-inline my-2 my-lg-0 mr-2">
+                            <li class="nav-item">
+                              <input class="form-control mr-sm-1" type="search" placeholder="Comment" aria-label="Search">
+                            </li>
+                            <li class="nav-item">
+                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comment</button>
+                            </li>
+                            </form>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+        <!-- end of footer of post section-->
+            </div>
+          </div>
+        
+           
+ 
+      <!-- end of footer of post section-->
+          </div>
+        </div>
+
+        
+
+
+
+
+        
+      <!-- footer -->
+    <div class="card text-center bg-light mt-lg-5">
+      <div class="card-footer text-dark">
+            abhidekho.com
+            <ul class="nav justify-content-center mt-lg-3">
+              <li class="nav-item">
+                <i class="fas fa-home fa-1x"></i>
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <i class="fas fa-paragraph fa-1x"></i>
+                <a class="nav-link" href="about.html">About</a>
+              </li> 
+              <li class="nav-item">
+                <i class="fas fa-headset fa-1x"></i>
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+        </div>
+      </div> 
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!--validation form-->  
+    <script src="js/validation.js"></script>
+
+    <!--back to top-->
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>
+    <script src="js/backtop.js"></script>
+
+
+  </body>
+</html>

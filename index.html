@@ -22,13 +22,13 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/IMG_20200204_193355.png" type="image/x-icon">
     
-    
+
     <title>QFix</title>
   </head>
 <body style="background-color:#ffffff" data-spy="scroll" data-target=".navbar" data-offset="50">
   
   <!-- Back to top button -->
-  <a id="button" href="#index.html"></a>
+  <a id="button" href="index.html"></a>
 
     <!--Navbar for the page-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark shadow-lg p-3 mb-5 bg-white rounded mr-2 ml-2 mt-2 pt-1 pb-3" data-spy="affix" data-offset-top="1"> 
@@ -55,9 +55,7 @@
            
             
             <form class="form-inline my-2 my-lg-0 mr-2">
-              <li class="nav-item">
-                <a class="nav-link" style="width:auto;"></i>Ask<i class="fas fa-plus mr-3"></i></a>
-              </li> 
+            
               <!-- Search Bar -->
               <li class="nav-item">
                 <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
@@ -67,6 +65,9 @@
               </li>
               </form>
 
+        <!-- Modal -->
+              
+          
           <!-- signup popbar -->  
             <li class="nav-item">
               <a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Signup<i class="fas fa-user-plus"></i></a>
@@ -178,7 +179,7 @@
             <a class="nav-link" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login<i class="fas fa-user-lock"></i></a>
             <div id="id02" class="modal">
 
-              <form class="modal-content animate" action="" method="post" onsubmit="return loginValidate();">
+              <form class="modal-content animate" id="lgform" action="" method="post" onsubmit="return loginValidate();">
                 <div class="imgcontainer">
                   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6TaCLCqU4K0ieF27ayjl51NmitWaJAh_X0r1rLX4gMvOe0MDaYw&s" alt="Avatar" class="avatar">
@@ -186,13 +187,13 @@
             
                 <div class="container">
                   <label for="exampleInputEmail1">Username</label>
-                  <input type="email" class="form-control" placeholder="UserName" name="userid" required>
+                  <input type="email" class="form-control" placeholder="UserName" id="email" name="userid" required>
             
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" placeholder="Password" name="pswrd" minlength="6" maxlength="15" required>
+                  <input type="password" class="form-control" placeholder="Password" id="password" name="pswrd" minlength="6" maxlength="15" required>
                     
                   <button type="submit" onclick="login(this.form)" value="Login">Login</button>
-                  
+               
                 </div>
             
                 <div class="container" style="background-color:#f1f1f1">
@@ -203,7 +204,7 @@
             </div>
             
             <!-- Script for the login with Username&&password -->
-
+            
             <script language="javascript">
               function login(form) { /*function to check userid & password*/
               /*the following code checkes whether the entered userid and password are matching*/
@@ -211,11 +212,29 @@
               if(form.userid.value == "admin@mail.com" && form.pswrd.value == "password") {
               //	window.open('DS_Login.html') /*  open the target page while ID & password matched */
                 alert("Successfully Login")	/*opens the alert box while Id & password matches*/
+                console.log('logged in');
+                
+                window.open('profile.html');  // redirect to Myaccount after logged-in
+
+                console.log(LoggedIN);
+
               }
               else {
                 alert("Invalid UserID && Password")/*displays error message*/
               }
             }
+             
+            // validating the entered email
+            function validateEmail(form)  
+              {  
+                var x = document.form.email.value;  
+                var atposition = x.indexOf("@");  
+                var dotposition = x.lastIndexOf(".");  
+                if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+                  return false;  
+                }  
+              }  
             </script>	
 
                         
@@ -271,42 +290,31 @@
               <div class="card-footer text-muted">
               <!-- like or dislike btn-->
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-light btn-lg" onclick="countLike1()" id="like1"> <i class="far fa-thumbs-up"></i> </button>
+                  <button type="button" class="btn btn-light btn-lg" onclick="alert('Login required');"> <i class="far fa-thumbs-up"></i> </button>
                   <input class="form-control" id="counterLike1" type="text" value="0" readonly>
-                  <button type="button" class="btn btn-light btn-lg ml-3" onclick="countDislike1()" id="dislike1"> <i class="far fa-thumbs-down"></i> </button>
+                  <button type="button" class="btn btn-light btn-lg ml-3" onclick="alert('Login required');"> <i class="far fa-thumbs-down"></i> </button>
                   <input class="form-control" id="counterDislike1" type="text" value="0" readonly>
                 </div>
-              <!-- increment or decrement onClick like or dislike btn -->
-                 <script>
-                    function countLike1()
-                      {
-                          var value = parseInt(document.getElementById('counterLike1').value, 10);
-                          value = isNaN(value) ? 0 : value;
-                          value++;
-                          document.getElementById('counterLike1').value = value;
-                      }
-
-                    function countDislike1()
-                      {
-                          var value = parseInt(document.getElementById('counterDislike1').value, 10);
-                          value = isNaN(value) ? 0 : value;
-                          value++;
-                          document.getElementById('counterDislike1').value = value;
-                      }
-                  </script>
+             
               <!-- light comment -->
                  <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx1" aria-expanded="false" aria-controls="collapseExample"></i>
                     <div class="collapse" id="collapseEx1">
                       <div class="card card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              <!-- comment box -->
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">okk</li>
+                          <li class="list-group-item">great...</li>
+                          <li class="list-group-item">thnks</li>
+                          <li class="list-group-item">ok thansks</li>
+                        </ul>
+              
+             <!-- comment box -->
                         <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
                           <form class="form-inline my-2 my-lg-0 mr-2">
                             <li class="nav-item">
                               <input class="form-control mr-sm-1" type="search" placeholder="Comment" aria-label="Search">
                             </li>
                             <li class="nav-item">
-                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comment</button>
+                              <button class="btn btn-outline-success my-2 my-sm-0" onclick="alert('Login required');" type="submit">Comment</button>
                             </li>
                             </form>
                           </ul>
@@ -316,10 +324,16 @@
         <!-- end of footer of post section-->
             </div>
           </div>
-        
-           
-  <!--Post in Card form-->
-        <div class="container">
+          
+      <!-- end of footer of post section-->
+          </div>
+        </div>
+
+
+
+
+         <!--Post in Card form-->
+         <div class="container">
           <div class="card text-left mt-lg-3">
             <div class="card-header">
               <i class="fas fa-user mr-2"></i>
@@ -337,42 +351,31 @@
             <div class="card-footer text-muted">
             <!-- like or dislike btn-->
               <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light btn-lg" onclick="countLike2()" id="like2"> <i class="far fa-thumbs-up"></i> </button>
-                <input class="form-control" id="counterLike2" type="text" value="0" readonly>
-                <button type="button" class="btn btn-light btn-lg ml-3" onclick="countDislike2()" id="dislike2"> <i class="far fa-thumbs-down"></i> </button>
-                <input class="form-control" id="counterDislike2" type="text" value="0" readonly>
+                <button type="button" class="btn btn-light btn-lg" onclick="alert('Login required');"> <i class="far fa-thumbs-up"></i> </button>
+                <input class="form-control" id="counterLike1" type="text" value="0" readonly>
+                <button type="button" class="btn btn-light btn-lg ml-3" onclick="alert('Login required');"> <i class="far fa-thumbs-down"></i> </button>
+                <input class="form-control" id="counterDislike1" type="text" value="0" readonly>
               </div>
-            <!-- increment or decrement onClick like or dislike btn -->
-              <script>
-                  function countLike2()
-                    {
-                        var value = parseInt(document.getElementById('counterLike2').value, 10);
-                        value = isNaN(value) ? 0 : value;
-                        value++;
-                        document.getElementById('counterLike2').value = value;
-                    }
-
-                  function countDislike2()
-                    {
-                        var value = parseInt(document.getElementById('counterDislike2').value, 10);
-                        value = isNaN(value) ? 0 : value;
-                        value++;
-                        document.getElementById('counterDislike2').value = value;
-                    }
-                </script>
+           
             <!-- light comment -->
-              <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx1" aria-expanded="false" aria-controls="collapseExample"></i>
+               <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx1" aria-expanded="false" aria-controls="collapseExample"></i>
                   <div class="collapse" id="collapseEx1">
                     <div class="card card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-            <!-- comment box -->
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">okk</li>
+                        <li class="list-group-item">great...</li>
+                        <li class="list-group-item">thnks</li>
+                        <li class="list-group-item">ok thansks</li>
+                      </ul>
+            
+           <!-- comment box -->
                       <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
                         <form class="form-inline my-2 my-lg-0 mr-2">
                           <li class="nav-item">
                             <input class="form-control mr-sm-1" type="search" placeholder="Comment" aria-label="Search">
                           </li>
                           <li class="nav-item">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comment</button>
+                            <button class="btn btn-outline-success my-2 my-sm-0" onclick="alert('Login required');" type="submit">Comment</button>
                           </li>
                           </form>
                         </ul>
@@ -382,7 +385,10 @@
       <!-- end of footer of post section-->
           </div>
         </div>
-
+    
+    <!-- end of footer of post section-->
+        </div>
+      </div>
         
 
 
@@ -392,7 +398,7 @@
       <!-- footer -->
     <div class="card text-center bg-light mt-lg-5">
       <div class="card-footer text-dark">
-            abhidekho.com
+        &copy; Copyright abhidekho.com 2019-20
             <ul class="nav justify-content-center mt-lg-3">
               <li class="nav-item">
                 <i class="fas fa-home"></i>
