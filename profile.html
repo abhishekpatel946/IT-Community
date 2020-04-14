@@ -28,7 +28,7 @@
 <body style="background-color:#ffffff" data-spy="scroll" data-target=".navbar" data-offset="50">
   
   <!-- Back to top button -->
-  <a id="button" href="#index.html"></a>
+  <a id="button" href="profile.html"></a>
 
     <!--Navbar for the page-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light text-dark shadow-lg p-3 mb-5 bg-white rounded mr-2 ml-2 mt-2 pt-1 pb-3" data-spy="affix" data-offset-top="1"> 
@@ -36,7 +36,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="profile.html">
             <img src="img/QFix_Horizontal.png" width="80px" height="80px" alt="image goes here" class="mt-lg-2" />
           </a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -147,21 +147,169 @@
         <!-- end of footer of post section-->
             </div>
           </div>
-        
-           
  
       <!-- end of footer of post section-->
           </div>
         </div>
 
-        
+                
+          <!--Post in Card form-->
+          <div class="container">
+            <div class="card text-left mt-lg-3">
+              <div class="card-header">
+                <i class="fas fa-user fa-1x mr-2"></i>
+                User
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">What is HTML?</h5>
+                <p class="card-text">
+                  HTML is short for HyperText Markup Language and is the language of the World Wide Web. 
+                  It is the standard text formatting language used for creating and displaying pages on the Web. 
+                  HTML documents are made up of two things: the content and the tags that format it for proper display on pages.
+                </p>
+                </p>
+              </div>
+              <div class="card-footer text-muted">
+              <!-- like or dislike btn-->
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-light btn-lg" onclick="countLike2()" id="like2"> <i class="far fa-thumbs-up fa-1x"> </i> </button>
+                  <input class="form-control" id="counterLike2" type="text" value="0" readonly>
+                  <button type="button" class="btn btn-light btn-lg ml-3" onclick="countDislike2()" id="dislike2"> <i class="far fa-thumbs-down fa-1x"> </i> </button>
+                  <input class="form-control" id="counterDislike2" type="text" value="0" readonly>
+                </div>
+              <!-- increment or decrement onClick like or dislike btn -->
+                <script>
+                    function countLike2()
+                      {
+                          var value = parseInt(document.getElementById('counterLike2').value, 10);
+                          value = isNaN(value) ? 0 : value;
+                          value++;
+                          document.getElementById('counterLike2').value = value;
+                      }
+
+                    function countDislike2()
+                      {
+                          var value = parseInt(document.getElementById('counterDislike2').value, 10);
+                          value = isNaN(value) ? 0 : value;
+                          value++;
+                          document.getElementById('counterDislike2').value = value;
+                      }
+                  </script>
+              <!-- light comment -->
+                <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx2" aria-expanded="false" aria-controls="collapseExample"></i>
+                    <div class="collapse" id="collapseEx2">
+                      <div class="card card-body">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">okk</li>
+                          <li class="list-group-item">great...</li>
+                          <li class="list-group-item">ok thansks</li>
+                        </ul>
+              
+            <!-- comment box -->
+                        <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
+                          <form class="form-inline my-2 my-lg-0 mr-2">
+                            <li class="nav-item">
+                              <input class="form-control mr-sm-1" type="search" placeholder="Comment" aria-label="Search">
+                            </li>
+                            <li class="nav-item">
+                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comment</button>
+                            </li>
+                            </form>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+        <!-- end of footer of post section-->
+            </div>
+          </div>
+
+        <!-- end of footer of post section-->
+          </div>
+        </div>
+
+              
+            <!--Post in Card form-->
+            <div class="container">
+              <div class="card text-left mt-lg-3">
+                <div class="card-header">
+                  <i class="fas fa-user fa-1x mr-2"></i>
+                  User
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">What is HTML?</h5>
+                  <p class="card-text">
+                    HTML is short for HyperText Markup Language and is the language of the World Wide Web. 
+                    It is the standard text formatting language used for creating and displaying pages on the Web. 
+                    HTML documents are made up of two things: the content and the tags that format it for proper display on pages.
+                  </p>
+                  </p>
+                </div>
+                <div class="card-footer text-muted">
+                <!-- like or dislike btn-->
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-light btn-lg" onclick="countLike3()" id="like3"> <i class="far fa-thumbs-up fa-1x"> </i> </button>
+                    <input class="form-control" id="counterLike3" type="text" value="0" readonly>
+                    <button type="button" class="btn btn-light btn-lg ml-3" onclick="countDislike3()" id="dislike3"> <i class="far fa-thumbs-down fa-1x"> </i> </button>
+                    <input class="form-control" id="counterDislike3" type="text" value="0" readonly>
+                  </div>
+                <!-- increment or decrement onClick like or dislike btn -->
+                  <script>
+                      function countLike3()
+                        {
+                            var value = parseInt(document.getElementById('counterLike3').value, 10);
+                            value = isNaN(value) ? 0 : value;
+                            value++;
+                            document.getElementById('counterLike3').value = value;
+                        }
+
+                      function countDislike3()
+                        {
+                            var value = parseInt(document.getElementById('counterDislike3').value, 10);
+                            value = isNaN(value) ? 0 : value;
+                            value++;
+                            document.getElementById('counterDislike3').value = value;
+                        }
+                    </script>
+                <!-- light comment -->
+                  <i class="far fa-comment-alt ml-3 mr-3" data-toggle="collapse" data-target="#collapseEx3" aria-expanded="false" aria-controls="collapseExample"></i>
+                      <div class="collapse" id="collapseEx3">
+                        <div class="card card-body">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">okk</li>
+                            <li class="list-group-item">great...</li>
+                            <li class="list-group-item">ok thansks</li>
+                          </ul>
+                
+              <!-- comment box -->
+                          <ul class="navbar-nav mr-1 mt-2 mt-lg-2">
+                            <form class="form-inline my-2 my-lg-0 mr-2">
+                              <li class="nav-item">
+                                <input class="form-control mr-sm-1" type="search" placeholder="Comment" aria-label="Search">
+                              </li>
+                              <li class="nav-item">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Comment</button>
+                              </li>
+                              </form>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+          <!-- end of footer of post section-->
+              </div>
+            </div>
+
+          <!-- end of footer of post section-->
+            </div>
+          </div>
+
+
 
 
 
 
         
       <!-- footer -->
-    <div class="card text-center bg-light mt-lg-5">
+    <!-- <div class="card text-center bg-light mt-lg-5">
       <div class="card-footer text-dark">
             abhidekho.com
             <ul class="nav justify-content-center mt-lg-3">
@@ -179,7 +327,7 @@
               </li>
             </ul>
         </div>
-      </div> 
+      </div>  -->
 
 
 
